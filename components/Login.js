@@ -10,7 +10,11 @@ const Login = () => {
         <TextInput style={styles.input_box} />
         <Text style={styles.signup_text}>비밀번호</Text>
         <TextInput style={styles.input_box} />
-        {/* <Button>로그인</Button> */}
+        <Button style={styles.login_button} />
+      </View>
+      <View style={styles.isMember}>
+        <p>회원이 아니신가요?</p>
+        <span>회원가입하기</span>
       </View>
     </View>
   )
@@ -54,8 +58,21 @@ const styles = StyleSheet.create({
         marginBottom: '5%',
         borderBottomWidth: '2',
         borderRadius: '10',
-        borderColor: 'ABC9FF',
-        
+        borderBottomColor: 'ABC9FF'
+    },
+    login_button: {
+      width: '100%',
+      height: '8%',
+      backgroundColor: 'ABC9FF',
+      color: 'white',
+    },
+    isMember: {
+      width: '60%',
+      height: '7%',
+      flex: '1',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
     }
   });
 
