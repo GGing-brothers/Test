@@ -10,12 +10,15 @@ const Login = () => {
         <TextInput style={styles.input_box} />
         <Text style={styles.signup_text}>비밀번호</Text>
         <TextInput style={styles.input_box} />
-        <Button style={styles.login_button} />
+        <Text style={styles.login_button}>
+          로그인하기 
+        </Text>
+        <View style={styles.isMember}>
+          <Text style={styles.isMember_text}>회원이 아니신가요? </Text>
+          <Text style={styles.isMember_button}>회원가입하기</Text>
+        </View>
       </View>
-      <View style={styles.isMember}>
-        <p>회원이 아니신가요?</p>
-        <span>회원가입하기</span>
-      </View>
+      
     </View>
   )
 }
@@ -49,6 +52,7 @@ const styles = StyleSheet.create({
     },
     login_text: {
         marginLeft: '3%',
+        marginTop: '30%',
     },
     input_box: {
         width: '100%',
@@ -57,22 +61,29 @@ const styles = StyleSheet.create({
         marginTop: '1%',
         marginBottom: '5%',
         borderBottomWidth: '2',
-        borderRadius: '10',
-        borderBottomColor: 'ABC9FF'
+        borderBottomColor: '#ABC9FF'
     },
     login_button: {
-      width: '100%',
-      height: '8%',
-      backgroundColor: 'ABC9FF',
       color: 'white',
+      width: '100%',
+      backgroundColor: '#ABC9FF',
+      height: '8%',
+      textAlign: 'center',
+      lineHeight: '45%',
+      overflow: "hidden",
+      borderRadius: '10',
+      marginTop: '10%', 
     },
     isMember: {
-      width: '60%',
-      height: '7%',
-      flex: '1',
+      marginTop: '5%',
       flexDirection: 'row',
-      alignItems: 'center',
       justifyContent: 'center',
+    },
+    isMember_text: {
+      marginLeft: '13%',
+    },
+    isMember_button: {
+      color: '#ABC9FF',
     }
   });
 
